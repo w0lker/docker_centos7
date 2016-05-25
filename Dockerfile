@@ -40,7 +40,7 @@ USER $USER
 RUN echo $'function parse_git_branch_and_add_brackets {\n\
     git branch --no-color 2> /dev/null | sed -e \'/^[^*]/d\' -e \'s/* \(.*\)/\(\\1\) /\'\n\
 }\n\
-PS1=\'\[\\e[0;36;40m\]\W $(parse_git_branch_and_add_brackets "(%s)")\$ \[\\e[0m\]\''\
+PS1=\'\[\\e[0;36m\]\W $(parse_git_branch_and_add_brackets "(%s)")\$ \[\\e[0m\]\''\
 >> .bashrc
 RUN curl https://raw.githubusercontent.com/w0lker/git_config/master/gitconfig -o .gitconfig
 RUN curl https://raw.githubusercontent.com/w0lker/git_config/master/gitignore_global -o .gitignore_global
