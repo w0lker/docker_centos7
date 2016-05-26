@@ -6,4 +6,4 @@
 
 ### 添加git配置
 
-### 添加bash-]complete
+### 添加bash-complete
