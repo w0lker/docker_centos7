@@ -42,14 +42,14 @@ RUN echo $'function parse_git_branch_and_add_brackets {\n\
 }\n\
 PS1=\'\[\\e[0;36m\]\W $(parse_git_branch_and_add_brackets "(%s)")\$ \[\\e[0m\]\''\
 >> .bashrc
-RUN curl https://raw.githubusercontent.com/w0lker/git_config/master/gitconfig -o .gitconfig
-RUN curl https://raw.githubusercontent.com/w0lker/git_config/master/gitignore_global -o .gitignore_global
+RUN curl https://raw.githubusercontent.com/w0lker/conf_git/master/gitconfig -o .gitconfig
+RUN curl https://raw.githubusercontent.com/w0lker/conf_git/master/gitignore_global -o .gitignore_global
 
 # colors
 RUN curl https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.256dark -o .dircolors
 
 # vim
-RUN curl https://raw.githubusercontent.com/w0lker/vim/master/vimrc -o .vimrc
+RUN curl https://raw.githubusercontent.com/w0lker/conf_vim/master/vimrc -o .vimrc
 RUN echo 'alias vi=vim' >> .bashrc
 
 # clear
